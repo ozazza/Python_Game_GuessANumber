@@ -3,10 +3,11 @@ import random
 computer_number = random.randint(1, 100)
 
 # Read Player's Move
-steps_max = 6
-steps_counter = 0
-is_guessed = False
 while True:
+    steps_max = 6
+    steps_counter = 0
+    is_guessed = False
+
     while steps_counter < steps_max:
         player_input = input('Guess the number (1-100): ')
 
@@ -32,6 +33,7 @@ while True:
         print(f'< Steps left {steps_left} >')
 
     if is_guessed:
+        print('<<< ------------(O)------------>>>')
         print('<<< Victory! You won the game! >>>')
     else:
         print(f'Sorry! The number was <<< {computer_number} >>>. Try another game!')
